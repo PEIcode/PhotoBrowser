@@ -55,8 +55,9 @@ class NetworkingImageViewController: BaseCollectionViewController {
         let dataSource = JXNetworkingDataSource(photoLoader: loader, numberOfItems: { () -> Int in
             return self.modelArray.count
         }, placeholder: { index -> UIImage? in
-            let cell = collectionView.cellForItem(at: indexPath) as? BaseCollectionViewCell
-            return cell?.imageView.image
+//            let cell = collectionView.cellForItem(at: indexPath) as? BaseCollectionViewCell
+//            return cell?.imageView.image
+            return nil
         }) { index -> String? in
             return self.modelArray[index].secondLevelUrl
         }
